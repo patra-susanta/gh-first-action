@@ -5,6 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Greet the user
-        run: |
-        echo "Hello World!"
-        echo "Second time"
+        run:  echo "Hello World!"
