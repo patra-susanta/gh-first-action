@@ -1,0 +1,14 @@
+name: Manual Deploy
+on:
+  workflow_dispatch: # Allows manual trigger from UI
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'staging'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploying to environment
+        run: echo "Deploying to ${{ github.event.inputs.environment }}"
